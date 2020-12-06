@@ -1,0 +1,7 @@
+# Игнорирование папок
+__pycache__
+build
+dist
+
+# Игнорирование файлов
+Counting_Belarusian_Сoins.spec
