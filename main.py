@@ -16,7 +16,7 @@ print('''Небольшая инструкция
 Если у вас не определенных монет, то указывайте цифру 0
 ''')
 
-big_money = input('''Считать крупные монеты? (д - считать, н - не считать)
+big_money = input('''Считать рубли? (д - считать, н - не считать)
 Ваш ответ: ''')
 
 while True:
@@ -24,23 +24,25 @@ while True:
     money2 = int(input('Введите кол-во монет, ценной 2 копейки: '))
     money3 = int(input('Введите кол-во монет, ценной 5 копейки: '))
     money4 = int(input('Введите кол-во монет, ценной 10 копеек: '))
+    money5 = int(input('Введите кол-во монет, ценной 20 копеек: '))
+    money6 = int(input('Введите кол-во монет, ценной 50 копеек: '))
+
     result_1 = MONEY__1 * money1
     result_2 = MONEY__2 * money2
     result_3 = MONEY__5 * money3
     result_4 = MONEY__10 * money4
+    result_5 = MONEY__20 * money5
+    result_6 = MONEY__50 * money6
+
     result_min = result_1 + result_2 + result_3 + result_4
     if big_money.lower() == "д":
-        money5 = int(input('Введите кол-во монет, ценной 20 копеек: '))
-        money6 = int(input('Введите кол-во монет, ценной 50 копеек: '))
         money7 = int(input('Введите кол-во монет, ценной 1 рубль: '))
         money8 = int(input('Введите кол-во монет, ценной 2 рубля: '))
 
-        result_5 = MONEY__20 * money5
-        result_6 = MONEY__50 * money6
         result_7 = MONEY__100 * money7
         result_8 = MONEY__200 * money8
 
-        result_max = result_min + result_5 + result_6 + result_7 + result_8
+        result_max = result_min + result_7 + result_8
         print(f'Общая сумма равна - {result_max:.2f} руб.')
         break
     elif big_money.lower() == "н":
